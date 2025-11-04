@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <meta name="description" content="Online Course Registration Form for Students">
+</head>
+<body>
+
+    <header>
+        <h1>Online Learning Platform</h1>
+        <h2>Course Registration Form</h2>
+    </header>
+
+    <main>
+        <form action="/submit-registration" method="POST" enctype="multipart/form-data">
+
+            <!-- PERSONAL INFORMATION -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. +91-9876543210"><br><br>
+
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob"><br><br>
+
+                <label for="profile">Upload Profile Picture:</label><br>
+                <input type="file" id="profile" name="profile" accept="image/*"><br>
+            </fieldset>
+
+            <br>
+
+            <!-- ACADEMIC BACKGROUND -->
+            <fieldset>
+                <legend>Academic Background</legend>
+
+                <label for="education">Current Education Level:</label><br>
+                <select id="education" name="education">
+                    <option value="">-- Select --</option>
+                    <option value="highschool">High School</option>
+                    <option value="bachelors">Bachelor's</option>
+                    <option value="masters">Master's</option>
+                    <option value="phd">PhD</option>
+                </select><br><br>
+
+                <label for="field">Field of Study:</label><br>
+                <input type="text" id="field" name="field" placeholder="e.g. Computer Science"><br><br>
+
+                <label for="experience">Years of Experience in Programming:</label><br>
+                <input type="number" id="experience" name="experience" min="0" max="20" placeholder="0-20"><br>
+            </fieldset>
+
+            <br>
+
+            <!-- COURSE PREFERENCES -->
+            <fieldset>
+                <legend>Course Preferences</legend>
+
+                <p><strong>Preferred Learning Mode:</strong></p>
+                <input type="radio" id="online" name="learning_mode" value="Online">
+                <label for="online">Online</label><br>
+                <input type="radio" id="offline" name="learning_mode" value="Offline">
+                <label for="offline">Offline</label><br>
+                <input type="radio" id="hybrid" name="learning_mode" value="Hybrid">
+                <label for="hybrid">Hybrid</label><br><br>
+
+                <p><strong>Course Categories:</strong></p>
+                <input type="checkbox" id="webdev" name="course_category" value="Web Development">
+                <label for="webdev">Web Development</label><br>
+                <input type="checkbox" id="mobiledev" name="course_category" value="Mobile App Development">
+                <label for="mobiledev">Mobile App Development</label><br>
+                <input type="checkbox" id="datasci" name="course_category" value="Data Science">
+                <label for="datasci">Data Science</label><br>
+                <input type="checkbox" id="aiml" name="course_category" value="AI/ML">
+                <label for="aiml">AI/ML</label><br>
+                <input type="checkbox" id="devops" name="course_category" value="DevOps">
+                <label for="devops">DevOps</label><br><br>
+
+                <p><strong>Preferred Schedule:</strong></p>
+                <input type="radio" id="weekdays" name="schedule" value="Weekdays">
+                <label for="weekdays">Weekdays</label><br>
+                <input type="radio" id="weekends" name="schedule" value="Weekends">
+                <label for="weekends">Weekends</label><br>
+                <input type="radio" id="flexible" name="schedule" value="Flexible">
+                <label for="flexible">Flexible</label><br>
+            </fieldset>
+
+            <br>
+
+            <!-- ADDITIONAL INFORMATION -->
+            <fieldset>
+                <legend>Additional Information</legend>
+
+                <label for="experience_level">Programming Experience Level (1-10):</label><br>
+                <input type="range" id="experience_level" name="experience_level" min="1" max="10"><br><br>
+
+                <label for="comments">Special Requirements or Comments:</label><br>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter any specific requirements..."></textarea><br><br>
+
+                <p><strong>Preferred Contact Method:</strong></p>
+                <input type="radio" id="contact_email" name="contact_method" value="Email">
+                <label for="contact_email">Email</label><br>
+                <input type="radio" id="contact_phone" name="contact_method" value="Phone">
+                <label for="contact_phone">Phone</label><br>
+                <input type="radio" id="contact_sms" name="contact_method" value="SMS">
+                <label for="contact_sms">SMS</label><br>
+            </fieldset>
+
+            <br>
+
+            <!-- TERMS AND CONDITIONS -->
+            <fieldset>
+                <legend>Terms and Conditions</legend>
+
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">I agree to the Terms and Conditions</label><br>
+
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">I want to receive newsletters and updates</label><br>
+            </fieldset>
+
+            <br>
+
+            <!-- SUBMIT BUTTONS -->
+            <input type="submit" value="Submit Registration">
+            <input type="reset" value="Reset Form">
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Online Learning Platform. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
